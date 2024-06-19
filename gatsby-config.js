@@ -6,5 +6,7 @@ module.exports = {
     title: `silent-improvement`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-sass"]
+  plugins: [
+    "gatsby-plugin-sass",
+  ],
 };

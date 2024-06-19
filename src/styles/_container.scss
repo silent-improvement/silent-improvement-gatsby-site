@@ -1,0 +1,75 @@
+html,
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: #342e2d;
+}
+
+.hover-effect {
+    transition: all 0.5s ease;
+    &:hover {
+        transform: rotate(360deg);
+        transition: all 0.5s ease;
+    }
+}
+  
+  //Mixins for responsive behaviour
+  
+  @mixin breakpoint-custom-down($max) {
+    @media all and (max-width: $max) {
+      @content;
+    }
+  }
+  
+  @mixin breakpoint-mobile-down {
+    @include breakpoint-custom-down($screen-sm-min) {
+      @content;
+    }
+  }
+  
+  @mixin breakpoint-tablet-down {
+    @include breakpoint-custom-down($screen-md-min) {
+      @content;
+    }
+  }
+  
+  @mixin breakpoint-desktop-down {
+    @include breakpoint-custom-down($screen-lg-min) {
+      @content;
+    }
+  }
+  
+  //containers for various breakpoints
+  
+  @mixin x-large-container {
+    @include container-fluid();
+  
+    max-width: $screen-xxl-min;
+  }
+  
+  @mixin large-container {
+    @include container-fluid();
+  
+    max-width: $screen-lg-min;
+  }
+  
+  @mixin medium-container {
+    @include container-fluid();
+  
+    max-width: $screen-md-min;
+  }
+  
+  @mixin small-container {
+    @include container-fluid();
+  
+    max-width: $screen-sm-min;
+  }
+  
+  @mixin container-fluid {
+    padding-inline: 1rem;
+    margin: 0 auto;
+  }

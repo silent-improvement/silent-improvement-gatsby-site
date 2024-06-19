@@ -1,0 +1,30 @@
+// variables set for screen sizes
+
+$screen-xs-min: 32rem;
+$screen-sm-min: 46rem;
+$screen-md-min: 52rem;
+$screen-lg-min: 62rem;
+$screen-xl-min: 73.25rem;
+$screen-xxl-min: 100rem;
+
+$screen-height: (
+  min-height: 52rem,
+);
+
+//variables set for font-size
+
+$heading-xl: 2.75rem;
+$heading-lg: 2.1875rem;
+$heading-md: 1.75rem;
+$heading-sm: 1.406rem;
+$heading-xs: 1.125rem;
+
+//variables set for line hight (lh)
+
+$heading-xl-lh: 3.313rem;
+$heading-lg-lh: 2.625rem;
+$heading-md-lh: 2.125rem;
+$heading-sm-lh: 1.875rem;
+$heading-xs-lh: 1.563rem;
+
+$font-weight: 800;

@@ -1,0 +1,80 @@
+.content {
+  margin: auto;
+  color: #fafafa;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  @include x-large-container;
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+
+  &__title {
+    text-align: center;
+    @include x-large-heading;
+    padding-bottom: 3rem;
+
+    @include breakpoint-tablet-down {
+      padding-bottom: 2rem;
+      margin: 0;
+    }
+  }
+
+  &__text-wrapper {
+    text-align: center;
+    padding-bottom: 5rem;
+    @include text-standard;
+  }
+
+  &__quote {
+    @include italic-text;
+
+    @include breakpoint-tablet-down {
+      font-size: 1rem;
+    }
+  }
+
+  &__expand-button {
+    @include text-sm;
+    text-decoration: none;
+    background: #9C691C;
+    color: #fafafa;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+    border: none;
+    padding: 2rem;
+    margin-bottom: 4rem;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+
+    &:hover {
+      background-color: #fafafa;
+      color: #342e2d;
+      transition: all 0.5s ease;
+      -webkit-transition: all 0.5s ease;
+    }
+  }
+
+  &__about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__about-intro {
+    @include text-standard;
+
+  }
+
+  &__email {
+    @include text-standard;
+    margin-top: 3rem;
+
+  }
+
+  &__self-statement {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+  }
+}

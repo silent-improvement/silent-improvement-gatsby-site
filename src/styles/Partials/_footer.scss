@@ -1,0 +1,66 @@
+.footer {
+  margin-top: auto;
+  background-color: #f5debb;
+
+  &__social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9rem 2rem;
+
+    @include breakpoint-tablet-down {
+      flex-direction: column;
+      padding: 5rem 2rem;
+    }
+  }
+
+  .fa-brands {
+    color: #342e2d;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+
+    &:hover {
+      color: #d89026;
+      transition: all 0.3s ease;
+      -webkit-transition: all 0.3s ease;
+      transform: scale(1.2);
+
+      @include breakpoint-tablet-down {
+        transition: none;
+        transform: unset;
+      }
+    }
+  }
+
+  .fa-tiktok,
+  .fa-x-twitter,
+  .fa-github,
+  .fa-facebook-f {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+
+    @include breakpoint-tablet-down {
+      padding-bottom: 3rem;
+    }
+  }
+
+  .fa-brands.fa-pinterest-p {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+
+    @include breakpoint-tablet-down {
+      padding-bottom: 0;
+    }
+  }
+
+  .fa-instagram,
+  .fa-youtube {
+    font-size: 2.625rem;
+    padding-bottom: 1rem;
+
+    @include breakpoint-tablet-down {
+      padding-bottom: 3rem;
+    }
+  }
+
+}

@@ -1,0 +1,125 @@
+@mixin text-x-large {
+    font-family: "Mukta Malar", sans-serif;
+    font-size: $heading-xl;
+    font-weight: $font-weight;
+    line-height: $heading-lg-lh;
+}
+
+@mixin text-large {
+    font-family: "Mukta Malar", sans-serif;
+    font-size: $heading-lg;
+    font-weight: $font-weight;
+    line-height: $heading-lg-lh;
+}
+
+@mixin text-medium {
+    font-family: "Mukta Malar", sans-serif;
+    font-size: $heading-md;
+    font-weight: $font-weight;
+    line-height: $heading-md-lh;
+}
+
+@mixin text-small {
+    font-family: "Mukta Malar", sans-serif;
+    font-size: $heading-sm;
+    font-weight: $font-weight;
+    line-height: $heading-sm-lh;
+}
+
+@mixin text-x-small {
+    font-family: "Mukta Malar", sans-serif;
+    font-size: $heading-xs;
+    font-weight: $font-weight;
+    line-height: $heading-xs-lh;
+}
+
+@mixin heading-x-large {
+    font-family: "PT Sans", sans-serif;
+    font-size: $heading-xl;
+    font-weight: $font-weight;
+    line-height: $heading-lg-lh;
+}
+
+@mixin heading-large {
+    font-family: "PT Sans", sans-serif;
+    font-size: $heading-lg;
+    font-weight: $font-weight;
+    line-height: $heading-lg-lh;
+}
+
+@mixin heading-medium {
+    font-family: "PT Sans", sans-serif;
+    font-size: $heading-md;
+    font-weight: $font-weight;
+    line-height: $heading-md-lh;
+}
+
+@mixin heading-small {
+    font-family: "PT Sans", sans-serif;
+    font-size: $heading-sm;
+    font-weight: $font-weight;
+    line-height: $heading-sm-lh;
+}
+
+@mixin heading-x-small {
+    font-family: "PT Sans", sans-serif;
+    font-size: $heading-xs;
+    font-weight: $font-weight;
+    line-height: $heading-xs-lh;
+}
+
+@mixin x-large-heading() {
+    @include heading-x-large;
+
+    @include breakpoint-tablet-down() {
+        @include heading-large;
+    }
+}
+
+@mixin large-heading() {
+    @include heading-large;
+
+    @include breakpoint-tablet-down() {
+        @include heading-medium;
+    }
+}
+
+@mixin small-heading() {
+    @include heading-small;
+
+    @include breakpoint-tablet-down() {
+        @include heading-x-small;
+    }
+}
+
+@mixin text-standard {
+    @include text-medium;
+    font-weight: 400;
+
+    @include breakpoint-tablet-down() {
+        @include text-small;
+        font-weight: 400;
+    }
+}
+
+@mixin text-sm {
+    @include text-small;
+    font-weight: 400;
+
+    @include breakpoint-tablet-down() {
+        @include text-x-small;
+        font-weight: 400;
+    }
+}
+
+@mixin italic-text {
+    @include text-small;
+    font-style: italic;
+    font-weight: 400;
+
+    @include breakpoint-tablet-down() {
+        @include text-x-small;
+        font-style: italic;
+        font-weight: 400;
+    }
+}

@@ -16,9 +16,19 @@
   },
   "dependencies": {
     "gatsby": "^5.13.5",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-react-svg": "^3.3.0",
     "gatsby-plugin-sass": "^6.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.77.3"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "url-loader": "^4.1.1"
   }
 }
