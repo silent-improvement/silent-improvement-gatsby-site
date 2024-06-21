@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import Hamburger from "./Hamburger";
 import NavMenu from "./NavMenu";
 import logo from "../images/logo.png";
@@ -8,16 +9,16 @@ const Header = () => {
     <>
       <header className="header">
         <div className="header__logo-title-wrapper">
-          <a href="/index.js">
+          <Link to="/">
             <img
               src={logo}
               className="header__logo"
               alt="Silent Improvement Logo"
             ></img>
-          </a>
-          <a href="/index.js" className="header__title">
+          </Link>
+          <Link to="/" className="header__title">
             <h3>Silent Improvement</h3>
-          </a>
+          </Link>
         </div>
         <div className="header__header-menu-wrapper">
           <Hamburger />

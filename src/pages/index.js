@@ -13,7 +13,7 @@ const IndexPage = () => {
       <Content />
       <Footer />
     </>
-  );
-};
+  )
+}
 
 export default IndexPage;

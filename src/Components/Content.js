@@ -4,13 +4,13 @@ import CardButton from "./CardButton";
 const Content = () => {
   return (
     <>
-      <div class="content">
-        <header class="content__title">
+      <div className="content">
+        <header className="content__title">
           Your first step to bettering yourself
         </header>
-        <div class="content__text-wrapper">
+        <div className="content__text-wrapper">
           <span>To whom this may concern:</span>
-          <p class="content__quote">
+          <p className="content__quote">
             "You have made the leap to improve yourself, whether it's financial,
             career-wise, or simply building better habits. This is a landing
             page of collated resources and advice that have aided me in pursuing

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "gatsby"
 
 const NavMenu = () => {
   const [navMenu, setNavMenu] = useState(false);
@@ -30,10 +31,10 @@ const NavMenu = () => {
     <>
       <ul className="header__header-menu">
         <li className="header__menu-items">
-          <a href="pages/about.html">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li className="header__menu-items">
-          <a href="pages/contact.html">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
         <li className="header__menu-accordion">
           <button className="header__menu-items" onClick={handleToggle}>
