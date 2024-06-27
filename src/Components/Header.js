@@ -5,6 +5,24 @@ import NavMenu from "./NavMenu";
 import logo from "../images/logo.png";
 
 const Header = () => {
+  const menuItems = [
+    {
+      text: "Resources",
+      url: "/pages/resources.html",
+    },
+    {
+      text: "Study Tips",
+      url: "#study-methodology",
+    },
+    {
+      text: "Website Updates",
+      url: "#updates",
+    },
+    {
+      text: "Web Development",
+      url: "#language-acquisition",
+    },
+  ];
   return (
     <>
       <header className="header">
@@ -21,8 +39,8 @@ const Header = () => {
           </Link>
         </div>
         <div className="header__header-menu-wrapper">
-          <Hamburger />
-          <NavMenu />
+          <Hamburger hamburger={menuItems}/>
+          <NavMenu navMenuItems={menuItems}/>
         </div>
       </header>
     </>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
 
-const Hamburger = () => {
+const Hamburger = ({ hamburger }) => {
   const [hBurger, setHamburger] = useState(false);
 
   const [navMenu, setNavMenu] = useState(false);
@@ -13,25 +14,6 @@ const Hamburger = () => {
   const handleHToggle = () => {
     setHamburger(!hBurger);
   };
-
-  const menuItems = [
-    {
-      text: "Resources",
-      url: "/pages/resources.html",
-    },
-    {
-      text: "Study Tips",
-      url: "#study-methodology",
-    },
-    {
-      text: "Website Updates",
-      url: "#updates",
-    },
-    {
-      text: "Web Development",
-      url: "#language-acquisition",
-    },
-  ];
 
   return (
     <>
@@ -142,8 +124,8 @@ const Hamburger = () => {
             }
           >
             <ul className="header__accordion-menu">
-              {menuItems.map((m) => (
-                <li className="header__accordion-items">
+              {hamburger.map((m, index) => (
+                <li key={index} className="header__accordion-items">
                   <a href={m.url}>{m.text}</a>
                 </li>
               ))}
@@ -154,4 +136,14 @@ const Hamburger = () => {
     </>
   );
 };
+
+Hamburger.propTypes = {
+  Hamburger: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+    ).isRequired,
+};
+
 export default Hamburger;

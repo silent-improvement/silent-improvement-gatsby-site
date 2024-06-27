@@ -1,27 +1,32 @@
 import React from "react";
-import CardButton from "./CardButton";
+import PageContent from "./PageContent";
 
 const Content = () => {
+  const cardButtonsData = [
+    {
+      text: "Click here to view Alex Hormozi, a reputable millionaire that gives sound advice on how to accumulate wealth and financial freedom through knowledge and hard work. He is focused on product-based business models.",
+      url: "https://www.youtube.com/@AlexHormozi",
+    },
+    {
+      text: "Click here to view Jeff Nippard, a renouned science-based bodybuilder who cites studies to back up how to most optimally gain muscle, accrue strength, and optimise your workouts.",
+      url: "https://www.youtube.com/@JeffNippard",
+    },
+    {
+      text: "Click here to view Ali Abdaal, a former doctor now turned productivity content creator. It was from him that I learned the art of studying and business / entrepreneurial information.",
+      url: "https://www.youtube.com/@aliabdaal",
+    },
+  ];
   return (
-    <>
-      <div className="content">
-        <header className="content__title">
-          Your first step to bettering yourself
-        </header>
-        <div className="content__text-wrapper">
-          <span>To whom this may concern:</span>
-          <p className="content__quote">
-            "You have made the leap to improve yourself, whether it's financial,
-            career-wise, or simply building better habits. This is a landing
-            page of collated resources and advice that have aided me in pursuing
-            a greater version of myself. I hope it can be of help, for these
-            things have helped me to strive for greatness."
-          </p>
-          <span>- Silent Improvement</span>
-        </div>
-        <CardButton />
-      </div>
-    </>
+    <PageContent
+      title="Your first step to bettering yourself"
+      intro="To whom this may concern:"
+      quote={`"You have made the leap to improve yourself, whether it's financial,
+          career-wise, or simply building better habits. This is a landing
+          page of collated resources and advice that have aided me in pursuing
+          a greater version of myself. I hope it can be of help, for these
+          things have helped me to strive for greatness."`}
+      cardButtons={cardButtonsData}
+    />
   );
 };
 

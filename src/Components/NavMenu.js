@@ -1,31 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "gatsby"
+import PropTypes from "prop-types";
 
-const NavMenu = () => {
+const NavMenu = ({ navMenuItems }) => {
   const [navMenu, setNavMenu] = useState(false);
 
   const handleToggle = () => {
     setNavMenu(!navMenu);
   };
-
-  const menuItems = [
-    {
-      text: "Resources",
-      url: "/pages/resources.html",
-    },
-    {
-      text: "Study Tips",
-      url: "#study-methodology",
-    },
-    {
-      text: "Website Updates",
-      url: "#updates",
-    },
-    {
-      text: "Web Development",
-      url: "#language-acquisition",
-    },
-  ];
 
   return (
     <>
@@ -56,15 +38,21 @@ const NavMenu = () => {
           </button>
           <div
             className={
+              // conditional logic to switch between open and closing accordion
               navMenu
                 ? "header__more-accordion"
                 : "header__more-accordion-close"
             }
           >
             <ul className="header__accordion-menu">
-              {menuItems.map((m) => (
-                <li className="header__accordion-items">
-                  <a href={m.url}>{m.text}</a>
+              {navMenuItems.map((item, index) => (
+                <li key={index} className="header__accordion-items">
+                  {/* conditional logic for whether the link is internal or external */}
+                  {item.url.startsWith("/") ? (
+                    <Link to={item.url}>{item.text}</Link>
+                  ) : (
+                    <a href={item.url}>{item.text}</a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -73,6 +61,15 @@ const NavMenu = () => {
       </ul>
     </>
   );
+};
+
+NavMenu.propTypes = {
+  NavMenu: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+    ).isRequired,
 };
 
 export default NavMenu;

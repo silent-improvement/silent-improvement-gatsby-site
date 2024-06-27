@@ -1,29 +1,15 @@
 import React from "react";
+import PropTypes from "prop-types";
 import youtube from "../images/youtube-icon.png";
 
-const CardButton = () => {
-  const cardButtons = [
-    {
-      text: "Click here to view Alex Hormozi, a reputable millionaire that gives sound advice on how to accumulate wealth and financial freedom through knowledge and hard work. He is focused on product-based business models.",
-      url: "https://www.youtube.com/@AlexHormozi",
-    },
-    {
-      text: "Click here to view Jeff Nippard, a renouned science-based bodybuilder who cites studies to back up how to most optimally gain muscle, accrue strength, and optimise your workouts.",
-      url: "https://www.youtube.com/@JeffNippard",
-    },
-    {
-      text: "Click here to view Ali Abdaal, a former doctor now turned productivity content creator. It was from him that I learned the art of studying and business / entrepreneurial information.",
-      url: "https://www.youtube.com/@aliabdaal",
-    },
-  ];
-
+const CardButton = ({ cardButtons }) => {
   return (
     <div className="card-button-container">
-      {cardButtons.map((card) => (
-        <div className="card-button">
+      {cardButtons.map((card, index) => (
+        <div key={index} className="card-button">
           <a href={card.url} className="card-button__items">
             <div className="card-button__item-content">
-              <img src={youtube} className="card-button__image" alt=""></img>
+              <img src={youtube} className="card-button__image" alt="YouTube Banner"></img>
               <div className="card-button__card-wrapper">
                 <span className="card-button__card-info">{card.text}</span>
                 <svg
@@ -46,6 +32,15 @@ const CardButton = () => {
       ))}
     </div>
   );
+};
+
+CardButton.propTypes = {
+  CardButtons: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+    })
+    ).isRequired,
 };
 
 export default CardButton;
