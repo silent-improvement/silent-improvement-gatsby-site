@@ -4,7 +4,6 @@ import { Link } from "gatsby";
 
 const Hamburger = ({ hamburger }) => {
   const [hBurger, setHamburger] = useState(false);
-
   const [navMenu, setNavMenu] = useState(false);
 
   const handleToggle = () => {
@@ -21,6 +20,7 @@ const Hamburger = ({ hamburger }) => {
         className="header__hamburger"
         title="Hamburger mobile menu"
         onClick={handleHToggle}
+        aria-label="Hamburger menu"
       >
         <svg
           className={
@@ -105,7 +105,7 @@ const Hamburger = ({ hamburger }) => {
           <Link to="/contact">Contact</Link>
         </li>
         <li className="header__menu-accordion">
-          <button className="header__menu-items" onClick={handleToggle}>
+          <button className="header__menu-items" onClick={handleToggle} aria-label="Navigation Menu">
             More
             <svg
               aria-hidden="true"
@@ -153,7 +153,7 @@ const Hamburger = ({ hamburger }) => {
 };
 
 Hamburger.propTypes = {
-  Hamburger: PropTypes.arrayOf(
+  hamburger: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
