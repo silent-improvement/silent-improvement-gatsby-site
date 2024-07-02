@@ -6,6 +6,7 @@ const CardButton = ({ cardButtons }) => {
   return (
     <div className="card-button-container">
       {cardButtons.map((card) => (
+        // made key unique to avoid issues with adding/removing/changing order of items
         <div key={`${card.text}-${card.url}`} className="card-button">
           <a href={card.url} className="card-button__items">
             <div className="card-button__item-content">
@@ -40,7 +41,7 @@ CardButton.propTypes = {
       text: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     })
-    ).isRequired,
+    ),
 };
 
 export default CardButton;

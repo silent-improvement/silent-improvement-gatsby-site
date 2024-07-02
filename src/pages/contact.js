@@ -1,20 +1,23 @@
 import * as React from "react";
 import Head from "../Components/Head";
 import Header from "../Components/Header";
-import ContactContent from "../Components/ContactContent";
+import PageContent from "../Components/PageContent";
 import Footer from "../Components/Footer";
 import "../styles/main.scss";
 
-const AboutPage = () => {
-    return (
-        <>
-            <Head />
-            <Header />
-            <ContactContent />
-            <Footer />
-        </>
-    )
-}
+const ContactPage = () => {
+  return (
+    <>
+      <Head title="Contact" />
+      <Header />
+      <PageContent
+        title="Contact Silent Improvement"
+        intro="To contact us directly please send an email to the address provided:"
+        email="silent.improvement.official@gmail.com"
+      />
+      <Footer />
+    </>
+  );
+};
 
-export default AboutPage;
-
+export default ContactPage;

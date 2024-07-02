@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 
 const Hamburger = ({ hamburger }) => {
   const [hBurger, setHamburger] = useState(false);
@@ -46,9 +46,9 @@ const Hamburger = ({ hamburger }) => {
               transform="translate(0 -1.721)"
               fill="none"
               stroke="#fafafa"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="3"
             ></path>
             <path
               id="Path_3860"
@@ -57,9 +57,9 @@ const Hamburger = ({ hamburger }) => {
               transform="translate(0)"
               fill="none"
               stroke="#fafafa"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="3"
             ></path>
             <path
               id="Path_3861"
@@ -68,9 +68,9 @@ const Hamburger = ({ hamburger }) => {
               transform="translate(0 -3.442)"
               fill="none"
               stroke="#fafafa"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="3"
             ></path>
           </g>
         </svg>
@@ -82,10 +82,10 @@ const Hamburger = ({ hamburger }) => {
           }
           viewBox="0 0 24 24"
           stroke="currentColor"
-          stroke-width="2"
+          strokeWidth="2"
           id="x-icon"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         >
           <line x1="18" y1="6" x2="6" y2="18"></line>
           <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -99,10 +99,10 @@ const Hamburger = ({ hamburger }) => {
         }
       >
         <li className="header__menu-items">
-          <a href="pages/about.html">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li className="header__menu-items">
-          <a href="pages/contact.html">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
         <li className="header__menu-accordion">
           <button className="header__menu-items" onClick={handleToggle}>
@@ -131,10 +131,12 @@ const Hamburger = ({ hamburger }) => {
           >
             <ul className="header__accordion-menu">
               {hamburger.map((m) => (
+                // made key unique to avoid issues with adding/removing/changing order of items
                 <li
                   key={`${m.text}-${m.url}`}
                   className="header__accordion-items"
                 >
+                  {/* conditional logic for whether the link is internal or external */}
                   {m.url.startsWith("/") ? (
                     <Link to={m.url}>{m.text}</Link>
                   ) : (
@@ -156,7 +158,7 @@ Hamburger.propTypes = {
       text: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     })
-  ).isRequired,
+  ),
 };
 
 export default Hamburger;

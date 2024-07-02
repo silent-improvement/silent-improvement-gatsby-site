@@ -70,7 +70,7 @@ NavMenu.propTypes = {
       text: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     })
-    ).isRequired,
+    ),
 };
 
 export default NavMenu;
