@@ -45,8 +45,9 @@ const NavMenu = ({ navMenuItems }) => {
             }
           >
             <ul className="header__accordion-menu">
-              {navMenuItems.map((item, index) => (
-                <li key={index} className="header__accordion-items">
+              {navMenuItems.map((item) => (
+                // made key unique to avoid issues with adding/removing/changing order of items
+                <li key={`${item.text}-${item.url}`} className="header__accordion-items">
                   {/* conditional logic for whether the link is internal or external */}
                   {item.url.startsWith("/") ? (
                     <Link to={item.url}>{item.text}</Link>

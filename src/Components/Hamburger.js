@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-
+import { Link } from "gatsby"
 
 const Hamburger = ({ hamburger }) => {
   const [hBurger, setHamburger] = useState(false);
@@ -9,8 +9,8 @@ const Hamburger = ({ hamburger }) => {
 
   const handleToggle = () => {
     setNavMenu(!navMenu);
-  }
-  
+  };
+
   const handleHToggle = () => {
     setHamburger(!hBurger);
   };
@@ -91,7 +91,13 @@ const Hamburger = ({ hamburger }) => {
           <line x1="6" y1="6" x2="18" y2="18"></line>
         </svg>
       </button>
-      <ul className={hBurger ? "header__header-menu--clicked" : "header__header-menu--hidden"}>
+      <ul
+        className={
+          hBurger
+            ? "header__header-menu--clicked"
+            : "header__header-menu--hidden"
+        }
+      >
         <li className="header__menu-items">
           <a href="pages/about.html">About</a>
         </li>
@@ -124,9 +130,16 @@ const Hamburger = ({ hamburger }) => {
             }
           >
             <ul className="header__accordion-menu">
-              {hamburger.map((m, index) => (
-                <li key={index} className="header__accordion-items">
-                  <a href={m.url}>{m.text}</a>
+              {hamburger.map((m) => (
+                <li
+                  key={`${m.text}-${m.url}`}
+                  className="header__accordion-items"
+                >
+                  {m.url.startsWith("/") ? (
+                    <Link to={m.url}>{m.text}</Link>
+                  ) : (
+                    <a href={m.url}>{m.text}</a>
+                  )}
                 </li>
               ))}
             </ul>
@@ -143,7 +156,7 @@ Hamburger.propTypes = {
       text: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     })
-    ).isRequired,
+  ).isRequired,
 };
 
 export default Hamburger;

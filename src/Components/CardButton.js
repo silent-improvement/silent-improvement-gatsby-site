@@ -5,8 +5,8 @@ import youtube from "../images/youtube-icon.png";
 const CardButton = ({ cardButtons }) => {
   return (
     <div className="card-button-container">
-      {cardButtons.map((card, index) => (
-        <div key={index} className="card-button">
+      {cardButtons.map((card) => (
+        <div key={`${card.text}-${card.url}`} className="card-button">
           <a href={card.url} className="card-button__items">
             <div className="card-button__item-content">
               <img src={youtube} className="card-button__image" alt="YouTube Banner"></img>
