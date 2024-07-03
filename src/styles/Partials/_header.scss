@@ -38,6 +38,7 @@
 
   &__x-icon {
     display: none;
+
     @include breakpoint-tablet-down {
       display: none;
       transition: all 0.5s ease;
@@ -121,9 +122,10 @@
       display: none;
     }
   }
-  
+
   &__header-menu--clicked {
     display: none;
+
     @include breakpoint-tablet-down {
       display: flex;
       position: fixed;
@@ -146,6 +148,7 @@
 
   &__header-menu--hidden {
     display: none;
+
     @include breakpoint-tablet-down {
       display: none;
     }
@@ -177,14 +180,8 @@
     align-items: center;
     width: 100%;
 
-    &:hover {
-      color: #d89026;
-    }
-
-    @include breakpoint-tablet-down {
-      &:active {
-        color: #342e2d;
-      }
+    &:active {
+      color: #342e2d;
     }
   }
 
@@ -217,8 +214,8 @@
   &__menu-accordion>button {
     transition: transform 0.5s ease;
 
-    &:hover svg,
-    &:hover {
+    &:active svg,
+    &:active {
       transition: transform 0.5s ease;
       fill: #d89026;
       color: #d89026;
