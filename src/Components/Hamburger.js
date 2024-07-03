@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { Link } from "gatsby";
 
 const Hamburger = ({ hamburger }) => {
   const [hBurger, setHamburger] = useState(false);
@@ -99,10 +98,10 @@ const Hamburger = ({ hamburger }) => {
         }
       >
         <li className="header__menu-items">
-          <Link to={`${__PATH_PREFIX__}/about`}>About</Link>
+          <a href={`${__PATH_PREFIX__}/about`}>About</a>
         </li>
         <li className="header__menu-items">
-          <Link to={`${__PATH_PREFIX__}/contact`}>Contact</Link>
+          <a href={`${__PATH_PREFIX__}/contact`}>Contact</a>
         </li>
         <li className="header__menu-accordion">
           <button className="header__menu-items" onClick={handleToggle} aria-label="Navigation Menu">
@@ -136,12 +135,7 @@ const Hamburger = ({ hamburger }) => {
                   key={`${m.text}-${m.url}`}
                   className="header__accordion-items"
                 >
-                  {/* conditional logic for whether the link is internal or external */}
-                  {m.url.startsWith("/") ? (
-                    <Link to={m.url}>{m.text}</Link>
-                  ) : (
                     <a href={`${__PATH_PREFIX__}${m.url}`}>{m.text}</a>
-                  )}
                 </li>
               ))}
             </ul>

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 import Hamburger from "./Hamburger";
 import NavMenu from "./NavMenu";
 import logo from "../images/logo.png";
@@ -27,16 +26,16 @@ const Header = () => {
     <>
       <header className="header">
         <div className="header__logo-title-wrapper">
-          <Link to="/">
+          <a href={`${__PATH_PREFIX__}/`}>
             <img
               src={logo}
               className="header__logo"
               alt="Silent Improvement Logo"
             ></img>
-          </Link>
-          <Link to="/" className="header__title">
+          </a>
+          <a href={`${__PATH_PREFIX__}/`} className="header__title">
             <h3>Silent Improvement</h3>
-          </Link>
+          </a>
         </div>
         <div className="header__header-menu-wrapper">
           <Hamburger hamburger={menuItems}/>

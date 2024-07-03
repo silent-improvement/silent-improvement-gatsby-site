@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "gatsby"
 import PropTypes from "prop-types";
 
 const NavMenu = ({ navMenuItems }) => {
@@ -13,10 +12,10 @@ const NavMenu = ({ navMenuItems }) => {
     <>
       <ul className="header__header-menu">
         <li className="header__menu-items">
-          <Link to="/about" >About</Link>
+          <a href={`${__PATH_PREFIX__}/about`} >About</a>
         </li>
         <li className="header__menu-items">
-          <Link to="/contact">Contact</Link>
+          <a href={`${__PATH_PREFIX__}/contact`}>Contact</a>
         </li>
         <li className="header__menu-accordion">
           <button className="header__menu-items" onClick={handleToggle}>
@@ -49,11 +48,7 @@ const NavMenu = ({ navMenuItems }) => {
                 // made key unique to avoid issues with adding/removing/changing order of items
                 <li key={`${item.text}-${item.url}`} className="header__accordion-items">
                   {/* conditional logic for whether the link is internal or external */}
-                  {item.url.startsWith("/") ? (
-                    <Link to={item.url}>{item.text}</Link>
-                  ) : (
                     <a href={`${__PATH_PREFIX__}${item.url}`}>{item.text}</a>
-                  )}
                 </li>
               ))}
             </ul>
