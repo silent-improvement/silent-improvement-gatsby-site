@@ -32,6 +32,7 @@ const IndexPage = () => {
           page of collated resources and advice that have aided me in pursuing
           a greater version of myself. I hope it can be of help, for these
           things have helped me to strive for greatness."`}
+        button="Click here for more info"  
         cardButtons={cardButtonsData}
       />
       <Footer />
