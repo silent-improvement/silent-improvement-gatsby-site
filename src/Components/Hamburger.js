@@ -99,10 +99,10 @@ const Hamburger = ({ hamburger }) => {
         }
       >
         <li className="header__menu-items">
-          <Link to="/about">About</Link>
+          <Link to={`${__PATH_PREFIX__}/about`}>About</Link>
         </li>
         <li className="header__menu-items">
-          <Link to="/contact">Contact</Link>
+          <Link to={`${__PATH_PREFIX__}/contact`}>Contact</Link>
         </li>
         <li className="header__menu-accordion">
           <button className="header__menu-items" onClick={handleToggle} aria-label="Navigation Menu">

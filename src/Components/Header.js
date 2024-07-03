@@ -27,14 +27,14 @@ const Header = () => {
     <>
       <header className="header">
         <div className="header__logo-title-wrapper">
-          <Link to="/">
+          <Link to={`${__PATH_PREFIX__}/`}>
             <img
               src={logo}
               className="header__logo"
               alt="Silent Improvement Logo"
             ></img>
           </Link>
-          <Link to="/" className="header__title">
+          <Link to={`${__PATH_PREFIX__}/`} className="header__title">
             <h3>Silent Improvement</h3>
           </Link>
         </div>
