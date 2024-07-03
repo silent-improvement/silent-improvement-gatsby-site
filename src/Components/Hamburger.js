@@ -140,7 +140,7 @@ const Hamburger = ({ hamburger }) => {
                   {m.url.startsWith("/") ? (
                     <Link to={m.url}>{m.text}</Link>
                   ) : (
-                    <a href={m.url}>{m.text}</a>
+                    <a href={`${__PATH_PREFIX__}${m.url}`}>{m.text}</a>
                   )}
                 </li>
               ))}

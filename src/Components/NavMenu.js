@@ -13,10 +13,10 @@ const NavMenu = ({ navMenuItems }) => {
     <>
       <ul className="header__header-menu">
         <li className="header__menu-items">
-          <Link to={`${__PATH_PREFIX__}/about`} >About</Link>
+          <Link to="/about" >About</Link>
         </li>
         <li className="header__menu-items">
-          <Link to={`${__PATH_PREFIX__}/contact`} >Contact</Link>
+          <Link to="/contact">Contact</Link>
         </li>
         <li className="header__menu-accordion">
           <button className="header__menu-items" onClick={handleToggle}>
@@ -52,7 +52,7 @@ const NavMenu = ({ navMenuItems }) => {
                   {item.url.startsWith("/") ? (
                     <Link to={item.url}>{item.text}</Link>
                   ) : (
-                    <a href={item.url}>{item.text}</a>
+                    <a href={`${__PATH_PREFIX__}${item.url}`}>{item.text}</a>
                   )}
                 </li>
               ))}
