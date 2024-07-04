@@ -13,7 +13,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: `/Users/edwardsl/Desktop/silent-improvement-gatsby/favicon.ico`,
+        icon: `/favicon.ico`,
       }
     }
   ],
