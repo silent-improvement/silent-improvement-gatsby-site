@@ -12,7 +12,6 @@ const Head = ({ title }) => {
         href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"
       />
       <title>{title}</title>
-      <link id="icon" rel="icon" href={`${__PATH_PREFIX__}/favicon.ico`} type="image/x-icon" />
     </>
   );
 };

@@ -10,5 +10,11 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        icon: `/Users/edwardsl/Desktop/silent-improvement-gatsby/favicon.ico`,
+      }
+    }
   ],
 };
