@@ -74,6 +74,10 @@
       align-items: center;
       margin-left: 0;
     }
+
+    @include breakpoint-mobile-down {
+      gap: 0.75rem;
+    }
   }
 
   &__logo {

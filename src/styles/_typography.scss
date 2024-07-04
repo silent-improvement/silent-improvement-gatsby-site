@@ -82,6 +82,10 @@
     @include breakpoint-tablet-down() {
         @include heading-medium;
     }
+
+    @include breakpoint-mobile-down() {
+        @include heading-small;
+    }
 }
 
 @mixin small-heading() {

@@ -34,7 +34,7 @@ const Header = () => {
             ></img>
           </a>
           <a href={`${__PATH_PREFIX__}/`} className="header__title">
-            <h3>Silent Improvement</h3>
+            Silent Improvement
           </a>
         </div>
         <div className="header__header-menu-wrapper">
