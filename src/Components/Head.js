@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../logo.png";
+import favicon from "./favicon.ico";
 
 const Head = ({ title }) => {
   return (
@@ -13,7 +13,7 @@ const Head = ({ title }) => {
         href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"
       />
       <title>{title}</title>
-      <link id="icon" rel="icon" href={logo} />
+      <link id="icon" rel="icon" href={favicon} type="image/x-icon" />
     </>
   );
 };
