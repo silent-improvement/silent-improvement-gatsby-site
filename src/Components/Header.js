@@ -1,7 +1,7 @@
 import React from "react";
 import Hamburger from "./Hamburger";
 import NavMenu from "./NavMenu";
-import logo from "../images/logo.png";
+import logo from "../../logo.png";
 
 const Header = () => {
   const menuItems = [

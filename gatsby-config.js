@@ -5,8 +5,8 @@ module.exports = {
   pathPrefix: "/silent-improvement-gatsby-site",
   siteMetadata: {
     title: `silent-improvement`,
-    description: `My static site that has been 'Gatsby'ified.`,
-    siteUrl: `https://www.yourdomain.tld`
+    description: `My static site that has been 'Gatsby' field.`,
+    siteUrl: `https://silent-improvement.github.io/silent-improvement-gatsby-site/`
   },
   plugins: [
     "gatsby-plugin-sass",
