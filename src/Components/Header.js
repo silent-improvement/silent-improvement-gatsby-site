@@ -7,7 +7,7 @@ const Header = () => {
   const menuItems = [
     {
       text: "Resources",
-      url: "/pages/resources.html",
+      url: "/resources",
     },
     {
       text: "Study Tips",
