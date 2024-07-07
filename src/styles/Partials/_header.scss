@@ -168,6 +168,13 @@
     justify-content: space-between;
     align-items: center;
 
+    &:hover svg,
+    &:hover {
+      transition: transform 0.5s ease;
+      fill: #d89026;
+      color: #d89026;
+    }
+
     @include breakpoint-tablet-down {
       margin: 0 0 4rem 2rem;
       padding: unset;
@@ -186,6 +193,16 @@
 
     &:active {
       color: #342e2d;
+    }
+
+    &:hover {
+      color: #d89026;
+    }
+
+    @include breakpoint-tablet-down {
+      &:hover {
+        color: #fafafa;
+      }
     }
   }
 
@@ -218,14 +235,21 @@
   &__menu-dropdown>button {
     transition: transform 0.5s ease;
 
-    &:active svg,
-    &:active {
+    &:hover svg,
+    &:hover {
       transition: transform 0.5s ease;
       fill: #d89026;
       color: #d89026;
     }
 
     @include breakpoint-tablet-down {
+
+      &:hover svg,
+      &:hover {
+        transition: transform 0.5s ease;
+        fill: #fafafa;
+        color: #fafafa;
+      }
 
       &:active svg,
       &:active {
