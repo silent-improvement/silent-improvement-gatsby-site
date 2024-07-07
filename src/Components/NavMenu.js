@@ -18,7 +18,7 @@ const NavMenu = ({ navMenuItems }) => {
           <a href={`${__PATH_PREFIX__}/contact`}>Contact</a>
         </li>
         <li className="header__menu-dropdown">
-          <button className="header__dropdown-items" onClick={handleToggle}>
+          <button className="header__menu-items" onClick={handleToggle}>
             More
             <svg
               aria-hidden="true"
@@ -37,13 +37,13 @@ const NavMenu = ({ navMenuItems }) => {
           </button>
           <div
             className={
-              // conditional logic to switch between open and closing accordion
+              // conditional logic to switch between open and closing dropdown
               navMenu
                 ? "header__more-dropdown"
                 : "header__more-dropdown-close"
             }
           >
-            <ul className="dropdown-menu">
+            <ul className="header__dropdown-menu">
               {navMenuItems.map((item) => (
                 // made key unique to avoid issues with adding/removing/changing order of items
                 <li key={`${item.text}-${item.url}`} className="header__dropdown-items">
