@@ -36,6 +36,8 @@
 
   &__expand-button {
     @include text-sm;
+    display: flex;
+    align-items: center;
     text-decoration: none;
     background: #9C691C;
     color: #fafafa;
@@ -45,7 +47,6 @@
     padding: 2rem;
     margin-bottom: 5rem;
     transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
 
     &:hover {
       background-color: #fafafa;
@@ -53,6 +54,11 @@
       transition: all 0.5s ease;
       -webkit-transition: all 0.5s ease;
     }
+  }
+
+  .fa-arrow-turn-up {
+    transform: rotate(270deg);
+    margin-left: 1rem;
   }
 
   &__about-intro {

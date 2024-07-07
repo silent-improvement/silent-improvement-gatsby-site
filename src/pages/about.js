@@ -20,6 +20,7 @@ const AboutPage = () => {
         for those at Silent Improvement."
         button="Back to Home Page"
         url={`${__PATH_PREFIX__}/`}
+        buttonClass={<i class="fa-solid fa-arrow-turn-up"></i>}
       />
       <Footer />
     </>

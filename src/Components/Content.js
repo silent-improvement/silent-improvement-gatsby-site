@@ -1,7 +1,7 @@
 import React from "react";
 import CardButton from "./CardButton";
 
-const Content = ({ title, intro, quote, email, button, url, cardButtons}) => {
+const Content = ({ title, intro, quote, email, button, url, buttonClass, cardButtons}) => {
     return (
         <div className="content">
             <header className="content__title">{title}</header>
@@ -10,7 +10,7 @@ const Content = ({ title, intro, quote, email, button, url, cardButtons}) => {
                 {quote && <p className="content__quote">{quote}</p>}
                 {email && <span className="content__email">{email}</span>}
             </div>
-            {button && url && <a href={url} className="content__expand-button" type="button">{button}</a>}
+            {button && url && <a href={url} className="content__expand-button" type="button">{button}{buttonClass}</a>}
             {cardButtons && <CardButton cardButtons={cardButtons} />}
         </div>
     );

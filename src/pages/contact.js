@@ -16,6 +16,7 @@ const ContactPage = () => {
         email="silent.improvement.official@gmail.com"
         button="Back to Home Page"
         url={`${__PATH_PREFIX__}/`}
+        buttonClass={<i class="fa-solid fa-arrow-turn-up"></i>}
       />
       <Footer />
     </>
