@@ -2,12 +2,8 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: auto;
   color: #fafafa;
-
-  @include x-large-container;
-  padding-top: 5rem;
-  padding-bottom: 2rem;
+  padding: 5rem 1rem 2rem 1rem;
 
   &__title {
     text-align: center;
@@ -52,7 +48,11 @@
       background-color: #fafafa;
       color: #342e2d;
       transition: all 0.5s ease;
-      -webkit-transition: all 0.5s ease;
+    }
+
+    @include breakpoint-mobile-down {
+      text-wrap: wrap;
+      text-align: center;
     }
   }
 
