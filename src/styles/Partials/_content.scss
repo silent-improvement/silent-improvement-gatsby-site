@@ -6,7 +6,7 @@
   color: #fafafa;
 
   @include x-large-container;
-  padding-top: 7rem;
+  padding-top: 5rem;
   padding-bottom: 2rem;
 
   &__title {
@@ -22,7 +22,7 @@
 
   &__text-wrapper {
     text-align: center;
-    padding-bottom: 2rem;
+    padding-bottom: 3rem;
     @include text-standard;
   }
 
@@ -43,7 +43,7 @@
     border-radius: 0.5rem;
     border: none;
     padding: 2rem;
-    margin-bottom: 7rem;
+    margin-bottom: 5rem;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
 

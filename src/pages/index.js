@@ -1,7 +1,7 @@
 import * as React from "react";
 import Head from "../Components/Head";
 import Header from "../Components/Header";
-import PageContent from "../Components/PageContent";
+import Content from "../Components/Content";
 import Footer from "../Components/Footer";
 import "../styles/main.scss";
 
@@ -24,7 +24,7 @@ const IndexPage = () => {
     <>
       <Head title="Home Page" />
       <Header />
-      <PageContent
+      <Content
         title="Your first step to bettering yourself"
         intro="To whom this may concern:"
         quote={`"You have made the leap to improve yourself, whether it's financial,
@@ -32,7 +32,8 @@ const IndexPage = () => {
           page of collated resources and advice that have aided me in pursuing
           a greater version of myself. I hope it can be of help, for these
           things have helped me to strive for greatness."`}
-        button="Click here for more info"  
+        button="Click here for more info"
+        url="https://www.google.co.nz"  
         cardButtons={cardButtonsData}
       />
       <Footer />
