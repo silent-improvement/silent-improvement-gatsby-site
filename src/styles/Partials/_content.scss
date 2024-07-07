@@ -1,12 +1,12 @@
 .content {
-  margin: auto;
-  color: #fafafa;
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin: auto;
+  color: #fafafa;
 
   @include x-large-container;
-  padding-top: 5rem;
+  padding-top: 7rem;
   padding-bottom: 2rem;
 
   &__title {
@@ -43,7 +43,7 @@
     border-radius: 0.5rem;
     border: none;
     padding: 2rem;
-    margin-bottom: 4rem;
+    margin-bottom: 7rem;
     transition: all 0.5s ease;
     -webkit-transition: all 0.5s ease;
 
