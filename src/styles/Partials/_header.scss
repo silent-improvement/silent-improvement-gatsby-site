@@ -303,17 +303,31 @@
     justify-content: space-around;
     text-align: left;
     padding: 0;
-  }
 
+  }
+  
   &__dropdown-items a {
-    padding-bottom: 3rem;
     text-decoration: none;
     color: #fafafa;
     transition: all 0.2s ease;
-
+    
     &:hover {
       transition: all 0.2s ease;
       color: #d89026;
+    }
+  }
+
+  &__dropdown-items {
+    @include breakpoint-tablet-down {
+      padding-bottom: 3rem;
+
+      &:first-child {
+        padding-top: 1.5rem;
+      }
+
+      &:last-child {
+        padding-bottom: 1.5rem;
+      }
     }
   }
 }
