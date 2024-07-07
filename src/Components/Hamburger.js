@@ -103,7 +103,7 @@ const Hamburger = ({ hamburger }) => {
         <li className="header__menu-items">
           <a href={`${__PATH_PREFIX__}/contact`}>Contact</a>
         </li>
-        <li className="header__menu-accordion">
+        <li className="header__menu-dropdown">
           <button className="header__menu-items" onClick={handleToggle} aria-label="Navigation Menu">
             More
             <svg
@@ -124,16 +124,16 @@ const Hamburger = ({ hamburger }) => {
           <div
             className={
               navMenu
-                ? "header__more-accordion"
-                : "header__more-accordion-close"
+                ? "header__more-dropdown"
+                : "header__more-dropdown-close"
             }
           >
-            <ul className="header__accordion-menu">
+            <ul className="header__dropdown-menu">
               {hamburger.map((m) => (
                 // made key unique to avoid issues with adding/removing/changing order of items
                 <li
                   key={`${m.text}-${m.url}`}
-                  className="header__accordion-items"
+                  className="header__dropdown-items"
                 >
                     <a href={`${__PATH_PREFIX__}${m.url}`}>{m.text}</a>
                 </li>

@@ -17,8 +17,8 @@ const NavMenu = ({ navMenuItems }) => {
         <li className="header__menu-items">
           <a href={`${__PATH_PREFIX__}/contact`}>Contact</a>
         </li>
-        <li className="header__menu-accordion">
-          <button className="header__menu-items" onClick={handleToggle}>
+        <li className="header__menu-dropdown">
+          <button className="header__dropdown-items" onClick={handleToggle}>
             More
             <svg
               aria-hidden="true"
@@ -39,14 +39,14 @@ const NavMenu = ({ navMenuItems }) => {
             className={
               // conditional logic to switch between open and closing accordion
               navMenu
-                ? "header__more-accordion"
-                : "header__more-accordion-close"
+                ? "header__more-dropdown"
+                : "header__more-dropdown-close"
             }
           >
-            <ul className="header__accordion-menu">
+            <ul className="dropdown-menu">
               {navMenuItems.map((item) => (
                 // made key unique to avoid issues with adding/removing/changing order of items
-                <li key={`${item.text}-${item.url}`} className="header__accordion-items">
+                <li key={`${item.text}-${item.url}`} className="header__dropdown-items">
                   {/* conditional logic for whether the link is internal or external */}
                     <a href={`${__PATH_PREFIX__}${item.url}`}>{item.text}</a>
                 </li>
