@@ -7,7 +7,7 @@ import Footer from "../Components/Footer";
 const ResourcesPage = () => {
   return (
     <>
-      <Head />
+      <Head title="Resources"/>
       <Header />
       <Content
         title="Resources"
