@@ -17,6 +17,7 @@
   }
 
   &__text-wrapper {
+    width: 100%;
     text-align: center;
     padding-bottom: 3rem;
     @include text-standard;
@@ -63,12 +64,13 @@
 
   &__about-intro {
     @include text-standard;
-
+    padding-bottom: 2rem;
   }
 
   &__email {
     @include text-standard;
     margin-top: 3rem;
+    word-wrap: break-word;
 
   }
 
