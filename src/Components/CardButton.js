@@ -10,7 +10,11 @@ const CardButton = ({ cardButtons }) => {
         <div key={`${card.text}-${card.url}`} className="card-button">
           <a href={card.url} className="card-button__items">
             <div className="card-button__item-content">
-              <img src={youtube} className="card-button__image" alt="YouTube Banner"></img>
+              <img
+                src={youtube}
+                className="card-button__image"
+                alt="YouTube Banner"
+              ></img>
               <div className="card-button__card-wrapper">
                 <span className="card-button__card-info">{card.text}</span>
                 <svg
@@ -41,7 +45,7 @@ CardButton.propTypes = {
       text: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     })
-    ),
+  ),
 };
 
 export default CardButton;

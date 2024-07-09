@@ -3,6 +3,7 @@ import Head from "../Components/Head";
 import Header from "../Components/Header";
 import Content from "../Components/Content";
 import Footer from "../Components/Footer";
+import CardButton from "../Components/CardButton";
 import "../styles/main.scss";
 
 const IndexPage = () => {
@@ -33,9 +34,10 @@ const IndexPage = () => {
           a greater version of myself. I hope it can be of help, for these
           things have helped me to strive for greatness."`}
         button="Click here for more info"
-        url="https://www.google.co.nz"  
-        cardButtons={cardButtonsData}
-      />
+        url="https://www.google.co.nz"
+      >
+      </Content>
+        <CardButton cardButtons={cardButtonsData} />
       <Footer />
     </>
   );
