@@ -9,11 +9,11 @@ const ResourcesPage = () => {
   const breadcrumbItems = [
     {
       text: "Home",
-      url: `${__PATH_PREFIX__}/`,
+      url: "/",
     },
     {
       text: "Resources",
-      url: `${__PATH_PREFIX__}/resources`,
+      url: "/resources",
     },
   ];
 

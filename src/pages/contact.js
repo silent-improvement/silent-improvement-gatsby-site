@@ -10,12 +10,11 @@ const ContactPage = () => {
   const breadcrumbItems = [
     {
       text: "Home",
-      url: `${__PATH_PREFIX__}/`,
+      url: "/",
     },
     {
       text: "Contact",
-      url: `${__PATH_PREFIX__}/contact`,
-    },
+      url: "/contact",    },
   ];
 
   return (

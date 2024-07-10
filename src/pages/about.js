@@ -10,11 +10,11 @@ const AboutPage = () => {
   const breadcrumbItems = [
     {
       text: "Home",
-      url: `${__PATH_PREFIX__}/`,
+      url: "/",
     },
     {
       text: "About",
-      url: `${__PATH_PREFIX__}/about`,
+      url: "/about",
     },
   ];
   return (
