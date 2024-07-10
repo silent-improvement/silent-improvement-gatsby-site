@@ -116,6 +116,12 @@
     }
 }
 
+@mixin text-breadcrumb {
+    @include text-x-small;
+    font-size: 0.938rem;
+    font-weight: 400;
+}
+
 @mixin italic-text {
     @include text-small;
     font-style: italic;

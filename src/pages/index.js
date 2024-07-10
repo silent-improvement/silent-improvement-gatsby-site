@@ -35,9 +35,8 @@ const IndexPage = () => {
           things have helped me to strive for greatness."`}
         button="Click here for more info"
         url="https://www.google.co.nz"
-      >
-      </Content>
-        <CardButton cardButtons={cardButtonsData} />
+      ></Content>
+      <CardButton cardButtons={cardButtonsData} />
       <Footer />
     </>
   );

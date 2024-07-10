@@ -1,15 +1,27 @@
 import * as React from "react";
 import Head from "../Components/Head";
+import Breadcrumb from "../Components/Breadcrumb";
 import Header from "../Components/Header";
 import Content from "../Components/Content";
 import Footer from "../Components/Footer";
 import "../styles/main.scss";
 
 const AboutPage = () => {
+  const breadcrumbItems = [
+    {
+      text: "Home",
+      url: `${__PATH_PREFIX__}/`,
+    },
+    {
+      text: "About",
+      url: `${__PATH_PREFIX__}/about`,
+    },
+  ];
   return (
     <>
       <Head title="About" />
       <Header />
+      <Breadcrumb breadcrumbs={breadcrumbItems} />
       <Content
         title="About Silent Improvement"
         intro="The mission of Silent Improvement is to create a centralized hub of
@@ -18,9 +30,6 @@ const AboutPage = () => {
         quote="Our aim is to filter through the misinformation that is littered on
         the internet and only provide information that has worked personally
         for those at Silent Improvement."
-        button="Back to Home Page"
-        url={`${__PATH_PREFIX__}/`}
-        buttonClass={<i class="fa-solid fa-arrow-turn-up"></i>}
       />
       <Footer />
     </>

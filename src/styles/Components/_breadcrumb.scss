@@ -1,0 +1,33 @@
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+    &__item {
+        display: flex;
+        padding-right: 1rem;
+    }
+
+    &__item-link {
+        @include text-breadcrumb;
+        color: #1470e1;
+        text-decoration: none;
+        padding-right: 1rem;
+
+        &:hover, &:focus, &:active {
+            text-decoration: underline;
+        }
+    }
+
+    &__item-span {
+        @include text-breadcrumb;
+        color: #fafafa;
+        text-decoration: none;
+        padding-right: 1rem;
+    }
+
+    &__slash-svg {
+        width: 0.5rem;
+        fill: #fafafa;
+    }
+}
