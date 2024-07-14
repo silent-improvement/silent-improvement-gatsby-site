@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3rem;
-  padding: 1rem;
+  padding: 0 1rem 3rem 1rem;
 
   @include breakpoint-desktop-down {
     grid-template-columns: 1fr 1fr;
