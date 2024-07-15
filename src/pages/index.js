@@ -26,12 +26,11 @@ const IndexPage = () => {
     };
     fetchData();
   }, []);
-
   return (
     <>
       <Head title="Home Page" />
       <Header data={data} />
-      <Content data={data.content} />
+      <Content data={data.content.index} />
       <CardButton data={data.cardButtons} />
       <Footer data={data.footer} />
     </>

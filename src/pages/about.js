@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from "react";
 import Head from "../Components/Head";
 import Breadcrumb from "../Components/Breadcrumb";
 import Header from "../Components/Header";
@@ -7,31 +7,32 @@ import Footer from "../Components/Footer";
 import "../styles/main.scss";
 
 const AboutPage = () => {
-  const breadcrumbItems = [
-    {
-      text: "Home",
-      url: "/",
-    },
-    {
-      text: "About",
-      url: "/about",
-    },
-  ];
+  const [data, setData] = useState({
+    navMenu: [],
+    breadcrumbs: [],
+    content: [],
+    footer: [],
+  });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("/data/data.json");
+        const jsonData = await response.json();
+        setData(jsonData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
   return (
     <>
       <Head title="About" />
-      <Header />
-      <Breadcrumb breadcrumbs={breadcrumbItems} />
-      <Content
-        title="About Silent Improvement"
-        intro="The mission of Silent Improvement is to create a centralized hub of
-        self-improvement information on finance, physical fitness, learning
-        a language, web development, or study techniques."
-        quote="Our aim is to filter through the misinformation that is littered on
-        the internet and only provide information that has worked personally
-        for those at Silent Improvement."
-      />
-      <Footer />
+      <Header data={data} />
+      <Breadcrumb breadcrumbs={data.breadcrumbs.about} />
+      <Content data={data.content.about} />
+      <Footer data={data.footer} />
     </>
   );
 };

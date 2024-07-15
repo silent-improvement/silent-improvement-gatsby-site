@@ -1,6 +1,6 @@
 import React from "react";
 
-const Content = ({ data }) => {
+const Content = ({ data = {} }) => {
   const { title, intro, quote, email, button, url, buttonClass } = data;
 
   return (

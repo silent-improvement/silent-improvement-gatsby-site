@@ -15,7 +15,6 @@ const Footer = ({ data }) => {
               title={fl.title}
             >
               <i className={`${fl.brandsClass} ${fl.socialClass}`}></i>{" "}
-              {/* Combine classes correctly */}
             </a>
           ))
         ) : (
