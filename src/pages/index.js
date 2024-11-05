@@ -17,7 +17,7 @@ const IndexPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/data/data.json");
+        const response = await fetch("http://localhost:5000/api/data");
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
@@ -26,11 +26,33 @@ const IndexPage = () => {
     };
     fetchData();
   }, []);
+
+  const handleSave = async (updatedContent) => {
+    const updatedData = { ...data, content: { ...data.content, index: updatedContent } };
+
+    try {
+      const response = await fetch("http://localhost:5000/api/data", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(updatedData),
+      });
+
+      if (response.ok) {
+        setData(updatedData);
+        console.log("Data updated successfully");
+      } else {
+        console.error("Error updating data:", await response.text());
+      }
+    } catch (error) {
+      console.error("Error saving data:", error);
+    }
+  };
+
   return (
     <>
       <Head title="Home Page" />
       <Header data={data} />
-      <Content data={data.content.index} />
+      <Content data={data.content.index} onSave={handleSave} />
       <CardButton data={data.cardButtons} />
       <Footer data={data.footer} />
     </>
