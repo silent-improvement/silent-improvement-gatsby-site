@@ -80,9 +80,11 @@ const Content = ({ data = {}, onSave }) => {
             {formData.quote && <p className="content__quote">{formData.quote}</p>}
           </div>
           {formData.button && formData.url && (
+          <div className="content__expand-button-container">
             <a href={formData.url} className="content__expand-button" type="button">
               {formData.button}
             </a>
+          </div>
           )}
           <button onClick={() => setEditMode(true)}>Edit</button>
         </div>
