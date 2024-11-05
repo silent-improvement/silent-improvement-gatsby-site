@@ -1,4 +1,36 @@
 {
+  "breadcrumbs": {
+    "contact": [
+      {
+        "text": "Home",
+        "url": "/"
+      },
+      {
+        "text": "Contact",
+        "url": "/contact"
+      }
+    ],
+    "about": [
+      {
+        "text": "Home",
+        "url": "/"
+      },
+      {
+        "text": "About",
+        "url": "/about"
+      }
+    ],
+    "resources": [
+      {
+        "text": "Home",
+        "url": "/"
+      },
+      {
+        "text": "Resources",
+        "url": "/resources"
+      }
+    ]
+  },
   "navMenu": [
     {
       "text": "Resources",
@@ -32,11 +64,27 @@
     }
   ],
   "content": {
-    "title": "Your first step to bettering yourself",
-    "intro": "To whom this may concern:",
-    "quote": "You have made the leap to improve yourself, whether it's financial, career-wise, or simply building better habits. This is a landing page of collated resources and advice that have aided me in pursuing a greater version of myself. I hope it can be of help, for these things have helped me to strive for greatness.",
-    "button": "Click here for more info",
-    "url": "https://www.google.co.nz"
+    "index": {
+      "title": "Your first step to bettering yourself",
+      "intro": "To whom this may concern:",
+      "quote": "You have made the leap to improve yourself, whether it's financial, career-wise, or simply building better habits. This is a landing page of collated resources and advice that have aided me in pursuing a greater version of myself. I hope it can be of help, for these things have helped me to strive for greatness.",
+      "button": "Click here for more info",
+      "url": "https://www.google.co.nz"
+    },
+    "contact": {
+      "title": "Contact Silent Improvement",
+      "intro": "To contact us directly please send an email to the address provided:",
+      "email": "silent.improvement.official@gmail.com"
+    },
+    "about": {
+      "title": "About Silent Improvement",
+      "intro": "The mission of Silent Improvement is to create a centralized hub of self-improvement information on finance, physical fitness, learning a language, web development, or study techniques.",
+      "quote": "Our aim is to filter through the misinformation that is littered on the internet and only provide information that has worked personally for those at Silent Improvement."
+    },
+    "resources": {
+      "title": "Resources",
+      "intro": "On this page is a collation of all the useful resources that have contributed to improvement from all areas"
+    }
   },
   "footer": [
     {
