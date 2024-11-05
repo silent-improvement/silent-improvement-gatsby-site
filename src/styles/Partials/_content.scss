@@ -31,16 +31,17 @@
     }
   }
 
+  &__expand-button-container {
+    display: flex;
+    justify-content: center;
+  }
+
   &__expand-button {
     @include text-sm;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-decoration: none;
     background: #9C691C;
     color: #fafafa;
     border-radius: 0.5rem;
-    border: none;
     padding: 2rem;
     transition: all 0.5s ease;
 
