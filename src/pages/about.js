@@ -17,7 +17,7 @@ const AboutPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("/data/data.json");
+        const response = await fetch("http://localhost:5000/api/data");
         const jsonData = await response.json();
         setData(jsonData);
       } catch (error) {
@@ -30,7 +30,7 @@ const AboutPage = () => {
     <>
       <Head title="About" />
       <Header data={data} />
-      <Breadcrumb breadcrumbs={data.breadcrumbs.about} />
+      <Breadcrumb data={data.breadcrumbs.about} />
       <Content data={data.content.about} />
       <Footer data={data.footer} />
     </>
