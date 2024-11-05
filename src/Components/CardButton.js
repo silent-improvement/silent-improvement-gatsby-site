@@ -2,12 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import youtube from "../images/youtube-icon.png";
 
-const CardButton = ({ cardButtons }) => {
+const CardButton = ({ data }) => {
   return (
     <div className="card-button-container">
-      {cardButtons.map((card) => (
-        // made key unique to avoid issues with adding/removing/changing order of items
-        <div key={`${card.text}-${card.url}`} className="card-button">
+      {data.map((card, index) => (
+        <div key={`${card.text}-${card.url}-${index}`} className="card-button">
           <a href={card.url} className="card-button__items">
             <div className="card-button__item-content">
               <img
@@ -40,12 +39,12 @@ const CardButton = ({ cardButtons }) => {
 };
 
 CardButton.propTypes = {
-  CardButtons: PropTypes.arrayOf(
+  data: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     })
-  ),
+  ).isRequired,
 };
 
 export default CardButton;

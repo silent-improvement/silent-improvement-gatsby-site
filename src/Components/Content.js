@@ -1,6 +1,8 @@
 import React from "react";
 
-const Content = ({ title, intro, quote, email, button, url, buttonClass }) => {
+const Content = ({ data }) => {
+  const { title, intro, quote, email, button, url, buttonClass } = data;
+
   return (
     <div className="content">
       <header className="content__title">{title}</header>
@@ -10,9 +12,8 @@ const Content = ({ title, intro, quote, email, button, url, buttonClass }) => {
         {email && <span className="content__email">{email}</span>}
       </div>
       {button && url && (
-        <a href={url} className="content__expand-button" type="button">
+        <a href={url} className={`content__expand-button ${buttonClass}`} type="button">
           {button}
-          {buttonClass}
         </a>
       )}
     </div>

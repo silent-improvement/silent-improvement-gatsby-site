@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const NavMenu = ({ navMenuItems }) => {
-  const [navMenu, setNavMenu] = useState(false);
+const NavMenu = ({ data }) => {
+  const [nav, setNav] = useState(false);
 
   const handleToggle = () => {
-    setNavMenu(!navMenu);
+    setNav(!nav);
   };
 
   return (
     <>
       <ul className="header__header-menu">
         <li className="header__menu-items">
-          <a href={`${__PATH_PREFIX__}/about`} >About</a>
+          <a href={`${__PATH_PREFIX__}/about`}>About</a>
         </li>
         <li className="header__menu-items">
           <a href={`${__PATH_PREFIX__}/contact`}>Contact</a>
@@ -23,7 +23,7 @@ const NavMenu = ({ navMenuItems }) => {
             <svg
               aria-hidden="true"
               className={
-                navMenu ? "header__menu-chev-rotate" : "header__menu-chev"
+                nav ? "header__menu-chev-rotate" : "header__menu-chev"
               }
               data-prefix="fas"
               data-icon="chevron-down"
@@ -38,19 +38,22 @@ const NavMenu = ({ navMenuItems }) => {
           <div
             className={
               // conditional logic to switch between open and closing dropdown
-              navMenu
-                ? "header__more-dropdown"
-                : "header__more-dropdown-close"
+              nav ? "header__more-dropdown" : "header__more-dropdown-close"
             }
           >
             <ul className="header__dropdown-menu">
-              {navMenuItems.map((item) => (
-                // made key unique to avoid issues with adding/removing/changing order of items
-                <li key={`${item.text}-${item.url}`} className="header__dropdown-items">
-                  {/* conditional logic for whether the link is internal or external */}
+              {data && data.length > 0 ? (
+                data.map((item) => (
+                  <li
+                    key={`${item.text}-${item.url}`}
+                    className="header__dropdown-items"
+                  >
                     <a href={`${__PATH_PREFIX__}${item.url}`}>{item.text}</a>
-                </li>
-              ))}
+                  </li>
+                ))
+              ) : (
+                <li>No menu items found</li>
+              )}
             </ul>
           </div>
         </li>
@@ -60,12 +63,12 @@ const NavMenu = ({ navMenuItems }) => {
 };
 
 NavMenu.propTypes = {
-  NavMenu: PropTypes.arrayOf(
+  data: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
     })
-    ),
+  ),
 };
 
 export default NavMenu;

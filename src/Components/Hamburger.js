@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-const Hamburger = ({ hamburger }) => {
+const Hamburger = ({ data }) => {
   const [hBurger, setHamburger] = useState(false);
-  const [navMenu, setNavMenu] = useState(false);
+  const [nav, setNav] = useState(false);
 
   const handleToggle = () => {
-    setNavMenu(!navMenu);
+    setNav(!nav);
   };
 
   const handleHToggle = () => {
@@ -104,12 +104,16 @@ const Hamburger = ({ hamburger }) => {
           <a href={`${__PATH_PREFIX__}/contact`}>Contact</a>
         </li>
         <li className="header__menu-dropdown">
-          <button className="header__menu-items" onClick={handleToggle} aria-label="Navigation Menu">
+          <button
+            className="header__menu-items"
+            onClick={handleToggle}
+            aria-label="Navigation Menu"
+          >
             More
             <svg
               aria-hidden="true"
               className={
-                navMenu ? "header__menu-chev-rotate" : "header__menu-chev"
+                nav ? "header__menu-chev-rotate" : "header__menu-chev"
               }
               data-prefix="fas"
               data-icon="chevron-down"
@@ -123,21 +127,22 @@ const Hamburger = ({ hamburger }) => {
           </button>
           <div
             className={
-              navMenu
-                ? "header__more-dropdown"
-                : "header__more-dropdown-close"
+              nav ? "header__more-dropdown" : "header__more-dropdown-close"
             }
           >
             <ul className="header__dropdown-menu">
-              {hamburger.map((m) => (
-                // made key unique to avoid issues with adding/removing/changing order of items
-                <li
-                  key={`${m.text}-${m.url}`}
-                  className="header__dropdown-items"
-                >
-                    <a href={`${__PATH_PREFIX__}${m.url}`}>{m.text}</a>
-                </li>
-              ))}
+              {data && data.length > 0 ? (
+                data.map((item) => (
+                  <li
+                    key={`${item.text}-${item.url}`}
+                    className="header__dropdown-items"
+                  >
+                    <a href={`${__PATH_PREFIX__}${item.url}`}>{item.text}</a>
+                  </li>
+                ))
+              ) : (
+                <li>No menu items found</li>
+              )}
             </ul>
           </div>
         </li>
@@ -147,7 +152,7 @@ const Hamburger = ({ hamburger }) => {
 };
 
 Hamburger.propTypes = {
-  hamburger: PropTypes.arrayOf(
+  data: PropTypes.arrayOf(
     PropTypes.shape({
       text: PropTypes.string.isRequired,
       url: PropTypes.string.isRequired,
