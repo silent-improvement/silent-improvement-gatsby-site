@@ -8,26 +8,20 @@ const bodyParser = require("body-parser");
 //when requesting resources from a different domain and allowing resources based on what's
 //been specified in the CORS headers
 const cors = require("cors");
-
 let path = require("path");
-
 //initialising the variable app as an express server application
 const app = express();
 //specify the port that the server will be running on
 const port = 5000;
-
 //this enables CORS on this app
 app.use(cors());
 //parse incoming requests with JSON payloads
 app.use(bodyParser.json());
-
 //path to JSON data file
-const dataFilePath = path.join(__dirname, "static/data/data.json");
-
+const dataFilePath = path.join(__dirname, "../server/static/data/data.json");
 app.get("/", (request, response) => {
     response.send("Welcome to the Express server!");
 });
-
 //GET endpoint for Express app (fetch the data)
 //need request in order to be able to use the response parameter
 app.get("/api/data", (request, response) => {
@@ -41,16 +35,13 @@ app.get("/api/data", (request, response) => {
         response.send(JSON.parse(data));
     });
 });
-
 //POST endpoint for Express app (update the data)
 app.post("/api/data", (request, response) => {
     //uses fs to write to JSON file 
     const newData = JSON.stringify(request.body, null, 2);
-
     fs.writeFile(dataFilePath, newData, "utf8", (error) => {
         if (error) {
             console.error("Error writing data file:", error);
-
             if (!response.headersSent) { // Only send response if headers haven't been sent yet
                 response.status(500).send("Error writing data file.");
             }
@@ -63,7 +54,6 @@ app.post("/api/data", (request, response) => {
         }
     });
 });
-
 app.post("/api/data", (request, response) => {
     fs.writeFile(dataFilePath, JSON.stringify, (request.body, null, 2), "utf8", (error) => {
         if (error) {
@@ -72,8 +62,6 @@ app.post("/api/data", (request, response) => {
         response.send("Data updated successfully.");
     });
 });
-
-
 //starts Express server on Port 5000
 app.listen(port, () => {
     //log that will have the server run on https://localhost:5000 (most likely)
