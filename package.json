@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "server": "node src/server/server.js"
+    "server": "node src/api/server.js"
   },
   "dependencies": {
     "body-parser": "^1.20.2",
