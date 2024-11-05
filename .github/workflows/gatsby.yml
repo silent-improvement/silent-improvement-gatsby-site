@@ -36,6 +36,9 @@ jobs:
 
       - name: Build with Gatsby
         run: npm run build -- --prefix-paths
+      
+      - name: Run the Express server
+        run: npm run server -- --prefix-paths
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
