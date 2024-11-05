@@ -1,0 +1,133 @@
+{
+  "breadcrumbs": {
+    "contact": [
+      {
+        "text": "Home",
+        "url": "/"
+      },
+      {
+        "text": "Contact",
+        "url": "/contact"
+      }
+    ],
+    "about": [
+      {
+        "text": "Home",
+        "url": "/"
+      },
+      {
+        "text": "About",
+        "url": "/about"
+      }
+    ],
+    "resources": [
+      {
+        "text": "Home",
+        "url": "/"
+      },
+      {
+        "text": "Resources",
+        "url": "/resources"
+      }
+    ]
+  },
+  "navMenu": [
+    {
+      "text": "Resources",
+      "url": "/resources"
+    },
+    {
+      "text": "Study Tips",
+      "url": "#study-methodology"
+    },
+    {
+      "text": "Website Updates",
+      "url": "#updates"
+    },
+    {
+      "text": "Web Development",
+      "url": "#language-acquisition"
+    }
+  ],
+  "cardButtons": [
+    {
+      "text": "Click here to view Alex Hormozi, a reputable millionaire that gives sound advice on how to accumulate wealth and financial freedom through knowledge and hard work. He is focused on product-based business models.",
+      "url": "https://www.youtube.com/@AlexHormozi"
+    },
+    {
+      "text": "Click here to view Jeff Nippard, a renouned science-based bodybuilder who cites studies to back up how to most optimally gain muscle, accrue strength, and optimise your workouts.",
+      "url": "https://www.youtube.com/@JeffNippard"
+    },
+    {
+      "text": "Click here to view Ali Abdaal, a former doctor now turned productivity content creator. It was from him that I learned the art of studying and business / entrepreneurial information.",
+      "url": "https://www.youtube.com/@aliabdaal"
+    }
+  ],
+  "content": {
+    "index": {
+      "title": "Your first step to bettering yourself",
+      "intro": "To whom this may concern:",
+      "quote": "You have made the leap to improve yourself, whether it's financial, career-wise, or simply building better habits. This is a landing page of collated resources and advice that have aided me in pursuing a greater version of myself. I hope it can be of help, for these things have helped me to strive for greatness.",
+      "button": "Click here for more info",
+      "url": "https://www.google.co.nz"
+    },
+    "contact": {
+      "title": "Contact Silent Improvement",
+      "intro": "To contact us directly please send an email to the address provided:",
+      "email": "silent.improvement.official@gmail.com"
+    },
+    "about": {
+      "title": "About Silent Improvement",
+      "intro": "The mission of Silent Improvement is to create a centralized hub of self-improvement information on finance, physical fitness, learning a language, web development, or study techniques.",
+      "quote": "Our aim is to filter through the misinformation that is littered on the internet and only provide information that has worked personally for those at Silent Improvement."
+    },
+    "resources": {
+      "title": "Resources",
+      "intro": "On this page is a collation of all the useful resources that have contributed to improvement from all areas"
+    }
+  },
+  "footer": [
+    {
+      "url": "https://www.tiktok.com/@silent_improvement",
+      "title": "Link to the Silent Improvement Tik Tok Page",
+      "brandsClass": "fa-brands",
+      "socialClass": "fa-tiktok"
+    },
+    {
+      "url": "https://www.instagram.com/silent__improvement/",
+      "title": "Link to the Silent Improvement Instagram",
+      "brandsClass": "fa-brands",
+      "socialClass": "fa-instagram"
+    },
+    {
+      "url": "https://www.facebook.com/",
+      "title": "Link to the Silent Improvement Facebook",
+      "brandsClass": "fa-brands",
+      "socialClass": "fa-facebook-f"
+    },
+    {
+      "url": "https://www.twitter.com/",
+      "title": "Link to the Silent Improvement Twitter",
+      "brandsClass": "fa-brands",
+      "socialClass": "fa-x-twitter"
+    },
+    {
+      "url": "https://www.youtube.com/",
+      "title": "Link to the Silent Improvement YouTube",
+      "brandsClass": "fa-brands",
+      "socialClass": "fa-youtube"
+    },
+    {
+      "url": "https://www.github.com/",
+      "title": "Link to the Silent Improvement Github",
+      "brandsClass": "fa-brands",
+      "socialClass": "fa-github"
+    },
+    {
+      "url": "https://www.pintrest.com/",
+      "title": "Link to the Silent Improvement Pintrest",
+      "brandsClass": "fa-brands",
+      "socialClass": "fa-pinterest-p"
+    }
+  ]
+}
