@@ -35,14 +35,13 @@
     @include text-sm;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-decoration: none;
     background: #9C691C;
     color: #fafafa;
-    font-size: 1.1rem;
     border-radius: 0.5rem;
     border: none;
     padding: 2rem;
-    margin-bottom: 4rem;
     transition: all 0.5s ease;
 
     &:hover {
