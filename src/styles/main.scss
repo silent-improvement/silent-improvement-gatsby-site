@@ -1,13 +1,14 @@
-@import "variables";
-@import "typography";
-@import "container";
+@use "../styles/variables";
+@use "../styles/typography";
+@use "../styles/container";
 
 // Components used in the landing page
 
-@import "Components/card-button";
-@import "Components/breadcrumb";
+@use "../styles/Components/card-button";
+@use "../styles/Components/breadcrumb";
+@use "../styles/Components/resource-card";
 
 //partials that make up the landing page
-@import "Partials/header";
-@import "Partials/content";
-@import "Partials/footer";
+@use "../styles/Partials/header";
+@use "../styles/Partials/content";
+@use "../styles/Partials/footer";

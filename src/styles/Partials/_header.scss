@@ -1,20 +1,23 @@
+@use "../container" as bp;
+@use "../typography" as t;
+
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   color: #fafafa;
-  background-color: #1c1919;
-  padding: 0 1rem;
+  background-color: #14181f;
+  padding: 0 10rem;
+  @include bp.breakpoint-desktop-down {
+    padding: 0 1rem;
+  }
 
   &__hamburger {
     display: none;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       display: flex;
       align-items: center;
       justify-content: flex-end;
       border: none;
-      background-color: #1c1919;
+      background-color: #14181f;
     }
 
     &:hover {
@@ -24,7 +27,7 @@
 
 
   &__hamburger-icon {
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       &:active path {
         stroke: #d89026;
       }
@@ -39,7 +42,7 @@
   &__x-icon {
     display: none;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       display: none;
       transition: all 0.5s ease;
 
@@ -50,7 +53,7 @@
   }
 
   &__x-icon--clicked {
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       position: fixed;
       color: #fafafa;
       stroke-width: 3px;
@@ -64,18 +67,24 @@
     }
   }
 
+  &__header-container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(250, 250, 250, 60%);
+  }
+
   &__logo-title-wrapper {
     display: flex;
     align-items: center;
     gap: 1rem;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       display: flex;
       align-items: center;
       margin-left: 0;
     }
 
-    @include breakpoint-mobile-down {
+    @include bp.breakpoint-mobile-down {
       gap: 0.75rem;
     }
   }
@@ -96,13 +105,13 @@
   &__title {
     text-decoration: none;
     color: #fafafa;
+    @include t.large-heading;
 
 
-    @include breakpoint-desktop-down {
-      font-size: 1.875rem;
+    @include bp.breakpoint-desktop-down {
+      font-size: 1.5rem;
     }
 
-    @include large-heading;
 
     &:visited {
       color: #fafafa;
@@ -122,7 +131,7 @@
     padding: 0;
     gap: 5rem;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       display: none;
     }
   }
@@ -130,7 +139,7 @@
   &__header-menu--clicked {
     display: none;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       display: flex;
       position: fixed;
       flex-direction: column;
@@ -154,7 +163,7 @@
   &__header-menu--hidden {
     display: none;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       display: none;
     }
   }
@@ -176,7 +185,7 @@
       color: #d89026;
     }
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       margin: 0 0 4rem 2rem;
       padding: unset;
       font-size: 1.5rem;
@@ -200,7 +209,7 @@
       color: #d89026;
     }
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       &:hover {
         color: #fafafa;
       }
@@ -214,7 +223,7 @@
     transform: rotate(0);
     transition: transform 0.5s ease;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       width: 1.5rem;
       margin-right: 3rem;
     }
@@ -227,7 +236,7 @@
     transform: rotate(180deg);
     transition: transform 0.5s ease;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       width: 1.5rem;
       margin-right: 3rem;
     }
@@ -244,7 +253,7 @@
       color: #d89026;
     }
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
 
       &:hover svg,
       &:hover {
@@ -266,7 +275,7 @@
 
   &__menu-dropdown {
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       width: 100%;
     }
   }
@@ -282,7 +291,7 @@
     z-index: 1;
     background-color: #1c1919;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       width: 100%;
       border: unset;
       background-color: #1c1919;
@@ -319,7 +328,7 @@
   }
 
   &__dropdown-items {
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       padding-bottom: 3rem;
 
       &:first-child {

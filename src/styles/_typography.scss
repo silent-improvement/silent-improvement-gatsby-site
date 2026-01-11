@@ -1,77 +1,80 @@
+@use "../styles/variables" as v;
+@use "../styles/container" as bp;
+
 @mixin text-x-large {
     font-family: "Mukta Malar", sans-serif;
-    font-size: $heading-xl;
-    font-weight: $font-weight;
-    line-height: $heading-lg-lh;
+    font-size: v.$heading-xl;
+    font-weight: v.$font-weight;
+    line-height: v.$heading-lg-lh;
 }
 
 @mixin text-large {
     font-family: "Mukta Malar", sans-serif;
-    font-size: $heading-lg;
-    font-weight: $font-weight;
-    line-height: $heading-lg-lh;
+    font-size: v.$heading-lg;
+    font-weight: v.$font-weight;
+    line-height: v.$heading-lg-lh;
 }
 
 @mixin text-medium {
     font-family: "Mukta Malar", sans-serif;
-    font-size: $heading-md;
-    font-weight: $font-weight;
-    line-height: $heading-md-lh;
+    font-size: v.$heading-md;
+    font-weight: v.$font-weight;
+    line-height: v.$heading-md-lh;
 }
 
 @mixin text-small {
     font-family: "Mukta Malar", sans-serif;
-    font-size: $heading-sm;
-    font-weight: $font-weight;
-    line-height: $heading-sm-lh;
+    font-size: v.$heading-sm;
+    font-weight: v.$font-weight;
+    line-height: v.$heading-sm-lh;
 }
 
 @mixin text-x-small {
     font-family: "Mukta Malar", sans-serif;
-    font-size: $heading-xs;
-    font-weight: $font-weight;
-    line-height: $heading-xs-lh;
+    font-size: v.$heading-xs;
+    font-weight: v.$font-weight;
+    line-height: v.$heading-xs-lh;
 }
 
 @mixin heading-x-large {
     font-family: "PT Sans", sans-serif;
-    font-size: $heading-xl;
-    font-weight: $font-weight;
-    line-height: $heading-lg-lh;
+    font-size: v.$heading-xl-lh;
+    font-weight: v.$font-weight;
+    line-height: v.$heading-lg-lh;
 }
 
 @mixin heading-large {
     font-family: "PT Sans", sans-serif;
-    font-size: $heading-lg;
-    font-weight: $font-weight;
-    line-height: $heading-lg-lh;
+    font-size: v.$heading-lg;
+    font-weight: v.$font-weight;
+    line-height: v.$heading-lg-lh;
 }
 
 @mixin heading-medium {
     font-family: "PT Sans", sans-serif;
-    font-size: $heading-md;
-    font-weight: $font-weight;
-    line-height: $heading-md-lh;
+    font-size: v.$heading-md;
+    font-weight: v.$font-weight;
+    line-height: v.$heading-md-lh;
 }
 
 @mixin heading-small {
     font-family: "PT Sans", sans-serif;
-    font-size: $heading-sm;
-    font-weight: $font-weight;
-    line-height: $heading-sm-lh;
+    font-size: v.$heading-sm;
+    font-weight: v.$font-weight;
+    line-height: v.$heading-sm-lh;
 }
 
 @mixin heading-x-small {
     font-family: "PT Sans", sans-serif;
-    font-size: $heading-xs;
-    font-weight: $font-weight;
-    line-height: $heading-xs-lh;
+    font-size: v.$heading-xs;
+    font-weight: v.$font-weight;
+    line-height: v.$heading-xs-lh;
 }
 
 @mixin x-large-heading() {
     @include heading-x-large;
 
-    @include breakpoint-tablet-down() {
+    @include bp.breakpoint-tablet-down() {
         @include heading-large;
     }
 }
@@ -79,11 +82,11 @@
 @mixin large-heading() {
     @include heading-large;
 
-    @include breakpoint-tablet-down() {
+    @include bp.breakpoint-tablet-down() {
         @include heading-medium;
     }
 
-    @include breakpoint-mobile-down() {
+    @include bp.breakpoint-mobile-down() {
         @include heading-small;
     }
 }
@@ -91,7 +94,7 @@
 @mixin small-heading() {
     @include heading-small;
 
-    @include breakpoint-tablet-down() {
+    @include bp.breakpoint-tablet-down() {
         @include heading-x-small;
     }
 }
@@ -100,7 +103,7 @@
     @include text-medium;
     font-weight: 400;
 
-    @include breakpoint-tablet-down() {
+    @include bp.breakpoint-tablet-down() {
         @include text-small;
         font-weight: 400;
     }
@@ -110,7 +113,7 @@
     @include text-small;
     font-weight: 400;
 
-    @include breakpoint-tablet-down() {
+    @include bp.breakpoint-tablet-down() {
         @include text-x-small;
         font-weight: 400;
     }
@@ -127,7 +130,7 @@
     font-style: italic;
     font-weight: 400;
 
-    @include breakpoint-tablet-down() {
+    @include bp.breakpoint-tablet-down() {
         @include text-x-small;
         font-style: italic;
         font-weight: 400;

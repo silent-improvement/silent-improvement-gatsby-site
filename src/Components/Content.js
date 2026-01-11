@@ -1,93 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-const Content = ({ data = {}, onSave }) => {
-  const [editMode, setEditMode] = useState(false);
-  const [formData, setFormData] = useState({
-    title: data.title || "",
-    intro: data.intro || "",
-    quote: data.quote || "",
-    button: data.button || "",
-    url: data.url || "",
-  });
-
-  // Sync formData state with data props when data changes
-  useEffect(() => {
-    setFormData({
-      title: data.title || "",
-      intro: data.intro || "",
-      quote: data.quote || "",
-      button: data.button || "",
-      url: data.url || "",
-    });
-  }, [data]);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleSave = () => {
-    setEditMode(false);
-    onSave(formData); // Call the parent save handler with updated data
-  };
+const Content = ({ data = {} }) => {
+  const { title, titleEmphasis, quote, email, button, url, buttonClass } = data;
 
   return (
     <div className="content">
-      {editMode ? (
-        <div>
-          <input
-            type="text"
-            name="title"
-            value={formData.title}
-            onChange={handleChange}
-            placeholder="Title"
-          />
-          <textarea
-            name="intro"
-            value={formData.intro}
-            onChange={handleChange}
-            placeholder="Intro"
-          />
-          <input
-            type="text"
-            name="quote"
-            value={formData.quote}
-            onChange={handleChange}
-            placeholder="Quote"
-          />
-          <input
-            type="text"
-            name="button"
-            value={formData.button}
-            onChange={handleChange}
-            placeholder="Button Text"
-          />
-          <input
-            type="text"
-            name="url"
-            value={formData.url}
-            onChange={handleChange}
-            placeholder="Button URL"
-          />
-          <button onClick={handleSave}>Save</button>
-          <button onClick={() => setEditMode(false)}>Cancel</button>
-        </div>
-      ) : (
-        <div>
-          <header className="content__title">{formData.title}</header>
-          <div className="content__text-wrapper">
-            {formData.intro && <div className="content__about-intro">{formData.intro}</div>}
-            {formData.quote && <p className="content__quote">{formData.quote}</p>}
-          </div>
-          {formData.button && formData.url && (
-          <div className="content__expand-button-container">
-            <a href={formData.url} className="content__expand-button" type="button">
-              {formData.button}
-            </a>
-          </div>
-          )}
-          <button onClick={() => setEditMode(true)}>Edit</button>
-        </div>
+      <header className="content__title">
+        {title}
+        {titleEmphasis && <span className="content__title-emphasis">{titleEmphasis}</span>}
+      </header>
+      <div className="content__text-wrapper">
+        {quote && <p className="content__quote">{quote}</p>}
+        {email && <span className="content__email">{email}</span>}
+      </div>
+      {button && url && (
+        <a href={url} className={`content__expand-button ${buttonClass}`} type="button">
+          {button}
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            viewBox="0 0 640 640"
+            className="content__expand-button-arrow"
+          >
+            <path d="M566.6 342.6C579.1 330.1 579.1 309.8 566.6 297.3L406.6 137.3C394.1 124.8 373.8 124.8 361.3 137.3C348.8 149.8 348.8 170.1 361.3 182.6L466.7 288L96 288C78.3 288 64 302.3 64 320C64 337.7 78.3 352 96 352L466.7 352L361.3 457.4C348.8 469.9 348.8 490.2 361.3 502.7C373.8 515.2 394.1 515.2 406.6 502.7L566.6 342.7z"/>
+          </svg>
+        </a>
       )}
     </div>
   );

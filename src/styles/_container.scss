@@ -1,3 +1,5 @@
+@use "../styles/variables" as v;
+
 html,
 body {
     display: flex;
@@ -6,7 +8,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #342e2d;
+    background-color: #14181f;
 }
 
 #___gatsby, #gatsby-focus-wrapper {
@@ -32,19 +34,25 @@ body {
   }
   
   @mixin breakpoint-mobile-down {
-    @include breakpoint-custom-down($screen-sm-min) {
+    @include breakpoint-custom-down(v.$screen-sm-min) {
       @content;
     }
   }
   
   @mixin breakpoint-tablet-down {
-    @include breakpoint-custom-down($screen-md-min) {
+    @include breakpoint-custom-down(v.$screen-md-min) {
       @content;
     }
   }
   
   @mixin breakpoint-desktop-down {
-    @include breakpoint-custom-down($screen-lg-min) {
+    @include breakpoint-custom-down(v.$screen-lg-min) {
+      @content;
+    }
+  }
+
+  @mixin breakpoint-large-desktop-down {
+    @include breakpoint-custom-down(v.$screen-xl-min) {
       @content;
     }
   }
@@ -54,25 +62,25 @@ body {
   @mixin x-large-container {
     @include container-fluid();
   
-    max-width: $screen-xxl-min;
+    max-width: v.$screen-xxl-min;
   }
   
   @mixin large-container {
     @include container-fluid();
   
-    max-width: $screen-lg-min;
+    max-width: v.$screen-lg-min;
   }
   
   @mixin medium-container {
     @include container-fluid();
   
-    max-width: $screen-md-min;
+    max-width: v.$screen-md-min;
   }
   
   @mixin small-container {
     @include container-fluid();
   
-    max-width: $screen-sm-min;
+    max-width: v.$screen-sm-min;
   }
   
   @mixin container-fluid {

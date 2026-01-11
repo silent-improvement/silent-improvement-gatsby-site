@@ -1,17 +1,25 @@
+@use "../container" as bp;
+@use "../typography" as t;
+
 .card-button-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 3rem;
-  padding: 0 1rem 3rem 1rem;
+  padding: 0 15rem 3rem 15rem;
 
-  @include breakpoint-desktop-down {
+  @include bp.breakpoint-large-desktop-down {
     grid-template-columns: 1fr 1fr;
     grid-gap: 3rem;
   }
 
-  @include breakpoint-tablet-down {
+  @include bp.breakpoint-desktop-down {
+    padding: 0 3rem 3rem 3rem;
+  }
+
+  @include bp.breakpoint-tablet-down {
     grid-template-columns: none;
     grid-template-rows: 1fr 1fr 1fr;
+    padding: 0 1rem 3rem 1rem;
   }
 }
 
@@ -29,7 +37,7 @@
       transition: transform 0.5s ease;
       transform: translateY(-5px);
 
-      @include breakpoint-tablet-down {
+      @include bp.breakpoint-tablet-down {
         transition: none;
         transform: unset;
       }
@@ -42,7 +50,7 @@
       color: #d89026;
       fill: #d89026;
 
-      @include breakpoint-tablet-down {
+      @include bp.breakpoint-tablet-down {
         transition: none;
         transform: unset;
 
@@ -71,7 +79,7 @@
     transition: all 0.5s ease;
     transition: transform 0.5s ease;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       transition: none;
       transform: unset;
     }
@@ -81,9 +89,9 @@
     color: #342e2d;
     transition: all 0.5s ease;
     padding-bottom: 2.5rem;
-    @include italic-text;
+    @include t.italic-text;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       transition: none;
       transform: unset;
     }
@@ -95,7 +103,7 @@
     padding: 1rem;
     transition: all 0.5s ease;
 
-    @include breakpoint-tablet-down {
+    @include bp.breakpoint-tablet-down {
       transition: none;
       transform: unset;
     }

@@ -9,12 +9,19 @@ module.exports = {
     siteUrl: `https://silent-improvement.github.io/silent-improvement-gatsby-site/`
   },
   plugins: [
-    "gatsby-plugin-sass",
+    {
+      resolve: `gatsby-plugin-sass`,
+      options: {
+        sassOptions: {
+          silenceDeprecations: ['legacy-js-api'],
+        },
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
         icon: `./favicon.ico`,
-      }
-    }
+      },
+    },
   ],
 };

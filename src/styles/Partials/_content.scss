@@ -1,32 +1,50 @@
+@use "../container" as bp;
+@use "../typography" as t;
+
 .content {
   display: flex;
   align-items: center;
   flex-direction: column;
   color: #fafafa;
-  padding: 5rem 1rem 2rem 1rem;
+  padding: 5rem 17rem 6rem 17rem;
+
+  @include bp.breakpoint-desktop-down {
+    padding: 5rem 3rem 6rem 3rem;
+  }
 
   &__title {
     text-align: center;
-    @include x-large-heading;
-    padding-bottom: 3rem;
+    @include t.x-large-heading;
 
-    @include breakpoint-tablet-down {
-      padding-bottom: 2rem;
+    @include bp.breakpoint-tablet-down {
       margin: 0;
     }
+  }
+
+  &__title-emphasis {
+    @include t.x-large-heading;
+    line-height: normal;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    background: linear-gradient(90deg, #E0400B, #F9AE5C);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-stroke: 0.1em transparent;
+    -webkit-text-fill-color: #14181f;
   }
 
   &__text-wrapper {
     width: 100%;
     text-align: center;
-    padding-bottom: 3rem;
-    @include text-standard;
+    @include t.text-standard;
   }
 
   &__quote {
-    @include italic-text;
-
-    @include breakpoint-tablet-down {
+    @include t.text-small;
+    color: rgba(250, 250, 250, 60%);
+    font-weight: normal;
+    text-wrap: wrap;
+    @include bp.breakpoint-tablet-down {
       font-size: 1rem;
     }
   }
@@ -37,12 +55,13 @@
   }
 
   &__expand-button {
-    @include text-sm;
+    @include t.text-x-small;
+    display: flex;
     text-decoration: none;
-    background: #9C691C;
-    color: #fafafa;
-    border-radius: 0.5rem;
-    padding: 2rem;
+    background: linear-gradient(360deg,#e87422, #f69a46);
+    color: #000000;
+    border-radius: 3rem;
+    padding: 1rem 2.5rem 1rem 2.5rem;
     transition: all 0.5s ease;
 
     &:hover {
@@ -51,10 +70,18 @@
       transition: all 0.5s ease;
     }
 
-    @include breakpoint-mobile-down {
+    @include bp.breakpoint-mobile-down {
       text-wrap: wrap;
       text-align: center;
     }
+  }
+
+  &__expand-button-arrow {
+    width: 1.3rem;
+    margin-left: 0.5rem;
+    fill: #000000;
+    transform: rotate(0);
+    transition: transform 0.5s ease;
   }
 
   .fa-arrow-turn-up {
@@ -62,13 +89,8 @@
     margin-left: 1rem;
   }
 
-  &__about-intro {
-    @include text-standard;
-    padding-bottom: 2rem;
-  }
-
   &__email {
-    @include text-standard;
+    @include t.text-standard;
     margin-top: 3rem;
     word-wrap: break-word;
 

@@ -9,7 +9,6 @@
     }
 
     &__item-link {
-        @include text-breadcrumb;
         color: #1470e1;
         text-decoration: none;
         padding-right: 1rem;
@@ -20,7 +19,6 @@
     }
 
     &__item-span {
-        @include text-breadcrumb;
         color: #fafafa;
         text-decoration: none;
         padding-right: 1rem;
