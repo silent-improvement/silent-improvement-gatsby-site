@@ -118,6 +118,10 @@
     }
   }
 
+  &__header-menu-wrapper {
+    display: flex;
+  }
+
   &__header-menu {
     font-family: "PT Sans", sans-serif;
     font-size: 1.25rem;

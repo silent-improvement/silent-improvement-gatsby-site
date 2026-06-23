@@ -1,0 +1,24 @@
+@use "../container" as bp;
+@use "../typography" as t;
+
+.brands {
+    padding: 4rem 10rem;
+
+    &__brand-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-top: 0.5rem dotted #252d3c;
+        border-bottom: 0.5rem dotted #252d3c;
+        padding: 0;
+    }
+
+    &__brand {
+        padding: 1.6rem;
+        list-style-type: none;
+    }
+
+    &__logo1, &__logo2, &__logo3, &__logo4, &__logo5 {
+        width: 6.5rem;
+    }
+}

@@ -88,8 +88,34 @@
     "resources": {
       "title": "Resources",
       "intro": "On this page is a collation of all the useful resources that have contributed to improvement from all areas"
+    },
+    "featured": {
+      "quote": "FEATURED TOPICS",
+      "email": "Improvement starts here"
     }
   },
+  "brands": [
+    {
+      "logoSource": "logoipsum-362.svg",
+      "logoClass": "brands__logo1"
+    },
+    {
+      "logoSource": "logoipsum-325.svg",
+      "logoClass": "brands__logo2"
+    },
+    {
+      "logoSource": "logoipsum-217.svg",
+      "logoClass": "brands__logo3"
+    },
+    {
+      "logoSource": "logoipsum-311.svg",
+      "logoClass": "brands__logo4"
+    },
+    {
+      "logoSource": "logoipsum-218.svg",
+      "logoClass": "brands__logo5"
+    }
+  ],
   "footer": [
     {
       "url": "https://www.tiktok.com/@silent_improvement",
